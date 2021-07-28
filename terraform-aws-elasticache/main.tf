@@ -21,7 +21,7 @@ provider "aws" {
 module "elasticache" {
   for_each    = var.elasticache
   version     = "0.0.18"
-  source      = "ref_your_module"
+  source      = "./elasticache"
   elasticache = each.value
   vpc         = var.vpc
   environment = var.environment
